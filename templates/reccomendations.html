@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Destinations</title>
+</head>
+<body>
+    <h1>Top Destinations According to Your Preferences</h1>
+    <ul>
+        {% for destination in best_destinations %}
+            <li>{{ destination }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
