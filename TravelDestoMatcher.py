@@ -4,7 +4,6 @@ sample_request = {
     'activities': 'sightseeing,shopping',  # Sample activities separated by commas
     'climate_preference': 'mild'  # Sample climate preference
 }
-
 def collect_user_preferences(user_input):
     budget = float(user_input['budget'])
     activities = user_input['activities'].split(',')
