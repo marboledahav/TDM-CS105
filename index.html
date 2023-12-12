@@ -7,15 +7,15 @@
     <h1>Welcome to the Travel Destination Recommender!</h1>
     <form action="/recommendations" method="post">
         <label for="budget">Enter your budget for the trip: $</label>
-        <input type="text" id="budget" name="budget" required><br><br>
-
-        <label for="activities">Enter preferred activities (separated by commas): </label>
-        <input type="text" id="activities" name="activities" required><br><br>
-
-        <label for="climate">Enter climate preference (warm, cold, mild, etc.): </label>
-        <input type="text" id="climate" name="climate" required><br><br>
-
-        <input type="submit" value="Get Recommendations">
+        <input type="number" id="budget" name="budget"><br><br>
+        
+        <label for="activities">Enter preferred activities (separated by commas):</label>
+        <input type="text" id="activities" name="activities"><br><br>
+        
+        <label for="climate_preference">Enter climate preference:</label>
+        <input type="text" id="climate_preference" name="climate_preference"><br><br>
+        
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
