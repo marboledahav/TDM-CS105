@@ -1,3 +1,10 @@
+# Simulating request data for testing
+sample_request = {
+    'budget': '1500',  # Sample budget
+    'activities': 'sightseeing,shopping',  # Sample activities separated by commas
+    'climate_preference': 'mild'  # Sample climate preference
+}
+
 def collect_user_preferences(user_input):
     budget = float(user_input['budget'])
     activities = user_input['activities'].split(',')
@@ -9,7 +16,6 @@ def collect_user_preferences(user_input):
     }
     
     return preferences
-
 
 
 def initialize_destinations():
@@ -224,7 +230,7 @@ def find_best_destination(user_preferences, destinations):
     return top_destinations
 
 
-user_preferences = collect_user_preferences()
+user_preferences = collect_user_preferences(sample_request)
 destinations = initialize_destinations()
 best_destinations = find_best_destination(user_preferences, destinations)
 
