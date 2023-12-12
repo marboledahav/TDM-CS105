@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travel Recommendations</title>
+    <title>Recommended Destinations</title>
 </head>
 <body>
-    <h1>Top Destination Match According to Your Preferences:</h1>
-    <p>Your top destination match was: {{ top_destination }}</p>
-    <p>Other recommended destinations: {{ second_destination }}, {{ third_destination }}</p>
+    <h1>Top Destinations According to Your Preferences</h1>
+    <ul>
+        {% for destination in best_destinations %}
+            <li>{{ destination }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
