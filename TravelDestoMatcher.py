@@ -1,7 +1,7 @@
-def collect_user_preferences():
-    budget = float(request.form['budget'])
-    activities = request.form['activities'].split(',')
-    climate_preference = request.form['climate_preference']
+def collect_user_preferences(user_input):
+    budget = float(user_input['budget'])
+    activities = user_input['activities'].split(',')
+    climate_preference = user_input['climate_preference']
     preferences = {
         'budget': budget,
         'activities': activities,
