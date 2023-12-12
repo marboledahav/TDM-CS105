@@ -10,9 +10,12 @@ def index():
 @app.route('/recommendations', methods=['POST'])
 def recommendations():
     if request.method == 'POST':
-        user_preferences = collect_user_preferences()
-        destinations = initialize_destinations()
-        best_destinations = find_best_destination(user_preferences, destinations)
+        budget = float(request.form['budget'])
+        activities = request.form['activities'].split(',')
+        climate_preference = request.form['climate_preference']
+        
+        # Process user preferences and find best destinations here
+        
         return render_template('recommendations.html', best_destinations=best_destinations)
 
 if __name__ == '__main__':
