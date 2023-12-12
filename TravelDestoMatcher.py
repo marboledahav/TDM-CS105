@@ -1,15 +1,7 @@
 def collect_user_preferences():
-    print("Welcome to the Travel Destination Recommender!")
-
-    while True:
-        try:
-            budget = float(input("Enter your budget for the trip: $"))
-            break
-        except ValueError:
-            print("Invalid input. Please enter a numeric value for the budget.")
-    activities = input("Enter preferred activities (separated by commas): ").replace(' ', '').split(',')
-    climate_preference = input("Enter climate preference (warm, cold, mild, etc.): ")
-    
+    budget = float(request.form['budget'])
+    activities = request.form['activities'].split(',')
+    climate_preference = request.form['climate_preference']
     preferences = {
         'budget': budget,
         'activities': activities,
