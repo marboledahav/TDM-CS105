@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from Travel Desto Matcher import collect_user_preferences, initialize_destinations, find_best_destination
+from TravelDestoMatcher import collect_user_preferences, initialize_destinations, find_best_destination
 
 app = Flask(__name__)
 
