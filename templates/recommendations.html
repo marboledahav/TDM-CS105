@@ -2,13 +2,19 @@
 <html>
 <head>
     <title>Recommended Destinations</title>
+    <style>
+        ul {
+            text-align: center;
+            list-style-type: none;
+        }
+    </style>
 </head>
 <body>
     <h1>Top Destinations According to Your Preferences</h1>
     <ul>
-        {% for destination in best_destinations[:3] %}
-            <li>{{ destination[0] }}</li>
-        {% endfor %}
+        <li><h2>The top destination is {{ best_destinations[0][0] }}</h2></li>
+        <li><h2>The second best would be {{ best_destinations[1][0] }}</h2></li>
+        <li><h2>The third would be {{ best_destinations[2][0] }}</h2></li>
     </ul>
 </body>
 </html>
