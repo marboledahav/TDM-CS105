@@ -6,7 +6,9 @@
 <body>
     <h1>Top Destinations According to Your Preferences</h1>
     <ul>
-            <li>The destinations that most closely match your preferences are the following, in descending order: {{best_destinations[0]}}</li>
+        {% for destination in best_destinations[:3] %}
+            <li>{{ destination[0] }}</li>
+        {% endfor %}
     </ul>
 </body>
 </html>
